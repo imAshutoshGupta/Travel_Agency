@@ -22,7 +22,7 @@ from payments import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('landing/', include('landing.urls')),
+    path('', include('landing.urls')),
     path('product/', include('product.urls')),
     path('payments/', include('payments.urls')),
 ]
