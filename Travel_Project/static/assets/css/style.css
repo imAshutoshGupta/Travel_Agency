@@ -1,0 +1,15 @@
+.anchor{
+    text-decoration: none;
+}
+.citem {
+    height: 300px;
+}
+.cimg {
+    height: 100%;
+}
+.h1{
+    color: red;
+}
+.navbar-inner {
+    background:transparent;
+}

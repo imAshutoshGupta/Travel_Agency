@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+
+<div id="carouselExampleCaptions" class="carousel carousel-dark slide p-0 shadow">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 450px;">
+            <img src="{% static '/assets/images/slide3.jpg' %}" class="d-block cimg w-100"
+                style="height: 100%; object-fit: cover; opacity:50%;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 450px;">
+            <img src="{% static '/assets/images/slide2.jpg' %}" class="d-block cimg w-100"
+                style="height: 100%; object-fit: cover; opacity:50%;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 450px;">
+            <img src="{% static '/assets/images/slide1.jpg' %}" class="d-block cimg w-100"
+                style="height: 100%;object-fit: cover; opacity:50%;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 450px;">
+            <img src="{% static '/assets/images/slide4.jpg' %}" class="d-block cimg w-100"
+                style="height: 100%;object-fit: cover; opacity:50%;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 450px;">
+            <img src="{% static '/assets/images/slide5.jpg' %}" class="d-block cimg w-100"
+                style="height: 100%;object-fit: cover; opacity:50%;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!--SLIDER ENDS-->
+
+<div class="row mt-3">
+    <div class="col-2">
+
+    </div>
+    <div class="col-md-6 mt-5 mb-4 mx-auto shadow-lg">
+        <div class="row mt-3 mb-3 text-center fw-bold">
+            <h2> Book Your Travel</h2>
+        </div>
+
+        <form method="POST">
+            <div class="form mb-3">
+                <label for="text"><strong>Where From?</strong></label>
+                <input type="text" class="form-control" id="text" placeholder="Enter your city">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Where To?</strong></label>
+                <input type="text" class="form-control" id="text" placeholder="Enter your Destination">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Date:</strong></label>
+                <input type="date" class="form-control" id="date" placeholder="Select your date of journey">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Number of Persons:</strong></label>
+                <input type="number" class="form-control" id="number" placeholder="Enter number of people travelling">
+            </div>
+        </form>
+        <br>
+        <div class="d-grid gap-2 col-5 mx-auto mb-4">
+            <button type="submit" class="btn btn-primary">Book Now</button>
+        </div>
+    </div>
+    <div class="col-2">
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--CARDS-->
+<div class="row mx-auto mt-4">
+    <div class="col text-center">
+        <h1 class="fw-bold"> POPULAR DESTINATIONS</h1>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card1.jpg' %}" class="card-img-top h-100" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card2.jpg' %}" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card3.jpg' %}" class="card-img-top h-100" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card4.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card5.jpg' %}" class="card-img-top " alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{% static '/assets/images/card6.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mx-auto mt-5">
+    <div class="col text-center">
+        <h1 class="fw-bold"> SERVICES</h1>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="card text-bg-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    <div class="card border-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-primary">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    <div class="card text-bg-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="card border-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-primary">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    <div class="card text-bg-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    <div class="card border-primary mb-3 mx-auto" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-primary">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+</div>
+<!--END OF SERViCES-->
+
+<div class="card mt-3 mb-3">
+    <img src="{% static '/assets/images/group1.jpg' %}" class="card-img-top" style="height: 300px; object-fit: cover;"
+        alt="...">
+    <div class="card-body">
+        <h3 class="card-title text-center fw-bold">Card title</h3>
+        <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content.
+            This content is a little bit longer.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock 'main' %}
