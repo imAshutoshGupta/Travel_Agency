@@ -74,33 +74,36 @@
     <div class="col-2">
 
     </div>
-    <div class="col-md-6 mt-5 mb-4 mx-auto shadow-lg">
+    <div class="col-md-5 mt-5 mb-4 mx-auto shadow-lg">
         <div class="row mt-3 mb-3 text-center fw-bold">
             <h2> Book Your Travel</h2>
         </div>
 
-        <form method="POST">
+        <form method="POST" action="/booknow">
+            {% csrf_token %}
             <div class="form mb-3">
                 <label for="text"><strong>Where From?</strong></label>
-                <input type="text" class="form-control" id="text" placeholder="Enter your city">
+                <input type="text" class="form-control" name="fcity" id="" placeholder="Enter your city">
             </div>
             <div class="form mb-3">
                 <label for="text"><strong>Where To?</strong></label>
-                <input type="text" class="form-control" id="text" placeholder="Enter your Destination">
+                <input type="text" class="form-control" name="ftcity" id="" placeholder="Enter your Destination">
             </div>
             <div class="form mb-3">
                 <label for="text"><strong>Date:</strong></label>
-                <input type="date" class="form-control" id="date" placeholder="Select your date of journey">
+                <input type="date" class="form-control" name="fdate" id=""
+                    placeholder="Select your date of journey">
             </div>
             <div class="form mb-3">
                 <label for="text"><strong>Number of Persons:</strong></label>
-                <input type="number" class="form-control" id="number" placeholder="Enter number of people travelling">
+                <input type="number" class="form-control" name="fnumber" id=""
+                    placeholder="Enter number of people travelling">
+            </div>  
+            <hr>
+            <div class="row text-center mb-4">
+                <a href="/bookings"> <button type="submit" class="btn btn-primary">Book Now</button></a>
             </div>
         </form>
-        <br>
-        <div class="d-grid gap-2 col-5 mx-auto mb-4">
-            <button type="submit" class="btn btn-primary">Book Now</button>
-        </div>
     </div>
     <div class="col-2">
 

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<div class="row mt-3 mb-3 text-center">
+    <h1><strong>YOUR BOOKINGS</strong></h1>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-primary">
+                <th scope="col">No.</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Date of Journey</th>
+                <th scope="col">Number of Persons</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Proceed with booking</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in bookings %}
+                <tr>
+                <th scope="row">{{x.id}}</th>
+                <td>{{x.from_city}}</td>
+                <td>{{x.to_city}}</td>
+                <td>{{x.d_journey}}</td>
+                <td class="text-center">{{x.n_persons}}</td>
+                <td><a href="/editjourney/{{x.id}}"><button class="btn btn-warning"> <i class="bi bi-pencil-square"></i> </button></a></td>
+                <td><a href="/deletejourney/{{x.id}}"><button class="btn btn-danger"> <i class="bi bi-trash3"></i> </button></a></td>
+                <td class="text-center"><a href="//{{x.id}}"><button class="btn btn-success"> <i class="bi bi-arrow-right-square"></i> </button></a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>  
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock 'main' %}

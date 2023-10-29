@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+
+
+<div class="row mt-3">
+    <div class="col-2">
+
+    </div>
+    <div class="col-md-5 mt-5 mb-4 mx-auto shadow-lg">
+        <div class="row mt-3 mb-3 text-center fw-bold">
+            <h2> Update Your Travel Details</h2>
+        </div>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form mb-3">
+                <label for="text"><strong>Where From?</strong></label>
+                <input type="text" class="form-control" name="fcity" id="" placeholder="Enter your city">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Where To?</strong></label>
+                <input type="text" class="form-control" name="ftcity" id="" placeholder="Enter your Destination">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Date:</strong></label>
+                <input type="date" class="form-control" name="fdate" id=""
+                    placeholder="Select your date of journey">
+            </div>
+            <div class="form mb-3">
+                <label for="text"><strong>Number of Persons:</strong></label>
+                <input type="number" class="form-control" name="fnumber" id=""
+                    placeholder="Enter number of people travelling">
+            </div>  
+            <hr>
+            <div class="row text-center mb-4">
+                <a href="/bookings"> <button type="submit" class="btn btn-primary">Update Details</button></a>
+            </div>
+        </form>
+    </div>
+    <div class="col-2">
+
+    </div>
+</div>
+
+{% endblock 'main' %}
