@@ -91,14 +91,18 @@
             </div>
             <div class="form mb-3">
                 <label for="text"><strong>Date:</strong></label>
-                <input type="date" class="form-control" name="fdate" id=""
-                    placeholder="Select your date of journey">
+                <input type="date" class="form-control" name="fdate" id="" placeholder="Select your date of journey">
             </div>
             <div class="form mb-3">
                 <label for="text"><strong>Number of Persons:</strong></label>
                 <input type="number" class="form-control" name="fnumber" id=""
                     placeholder="Enter number of people travelling">
-            </div>  
+            </div>
+            {% if errmsg %}
+            <div class="alert alert-danger">
+                {{errmsg}}
+            </div>
+            {% endif %}
             <hr>
             <div class="row text-center mb-4">
                 <a href="/bookings"> <button type="submit" class="btn btn-primary">Book Now</button></a>

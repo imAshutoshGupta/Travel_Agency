@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'tagency',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '@Shu27488',
-        'PORT': '3306',
+        'PASSWORD': '',
+        'PORT': '3307',
 
     }
 }

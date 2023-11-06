@@ -15,9 +15,13 @@ def book_now(request):
         fdate=request.POST['fdate']
         fnumber=request.POST['fnumber']
 
-        o=BookNow.objects.create(from_city=fcity,to_city=ftcity,d_journey=fdate,n_persons=fnumber)
-        o.save()
-        return redirect('/bookings')
+        if fcity=='' or ftcity=='' or fdate=='' or fnumber=='':
+            context={'errmsg':"Fields cannot be blank"}
+            return render(request,'landing/index.html',context)
+        else:
+            o=BookNow.objects.create(from_city=fcity,to_city=ftcity,d_journey=fdate,n_persons=fnumber)
+            o.save()
+            return redirect('/bookings')
     
 def bookings(request):
     o=BookNow.objects.all()

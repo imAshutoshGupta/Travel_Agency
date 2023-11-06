@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+import datetime
 
 # Create your models here.
 class BookNow(models.Model):
